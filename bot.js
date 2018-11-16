@@ -1,104 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "-";
-client.on('ready', () => {
-  client.user.setGame('Type *help','https://www.twitch.tv/peery13');
-  console.log('---------------');
-  console.log(' Bot Is Online')
-  console.log('---------------')
-});
-client.on('message', msg => {
-	var prefix = "...=";
-  if (msg.author.bot) return;
-  if (!msg.content.startsWith(prefix)) return;
-  let command = msg.content.split(" ")[0];
-  command = command.slice(prefix.length);
-  let args = msg.content.split(" ").slice(1);
 
-    if(command === "clear") {
-        const emoji = client.emojis.find("name", "wastebasket")
-    let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
-    if (textxt == "") {
-        msg.delete().then
-    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
-} else {
-    msg.delete().then
-    msg.delete().then
-    msg.channel.bulkDelete(textxt);
-        msg.channel.send("```Cleard: " + textxt + "\n Messages```").then(m => m.delete(3000));
-        }    
-    }
-}
-});
-
-
-client.on("message", message => {
-	var prefix = "003A469";
- if (message.content === "=..0hElp") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("#000000") 
-      .setDescription(`
-	  
-	         Please Chose: 
-			 
-${prefix}help public ⇏ اوامر عامة
-${prefix}help admin ⇏ اوامر ادارة السيرفر
-			 
-${prefix}help games ⇏ اوامر الالعاب
-${prefix}help music ⇏ اوامر الموسيقى
-
-${prefix}clan لعرض اوامر الكلانات 
-`)
-   message.channel.sendEmbed(embed)
-    
-   }
-   }); 
-  
-
-client.on("message", message => {
-	var prefix = "a.aaaa.a=";
- if (message.content === "=help public") {
-	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
-      .setDescription(`
-			  اوامر عامة
-❖=allbots ~ لعرض جميع البوتات الي بالسيرفر
-❖=server ~يعرض لك معلومات عن السيرفر
-❖=bot ~ يعرض لك كل معلومات البوت
-❖=skin <name> ~ يعرض لك سكنك بماين كرافت
-❖=count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
-❖=invites ~ يعرض لك  عدد انفايتاتك بالسيرفر 
-❖=invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر 
-❖=cal ~ اله حاسبة
-❖=trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
-❖=short ~ يختصر لك رابط كبير الى رابط صغير
-❖=tag ~ يكتب لك الكلمة بشكل جميل وكبير
-❖=google ~ للبحث في قوقل عن طريق الدسكورد
-❖=perms ~ يعرض لك برمشناتك بالسيرفر
-❖=za5 ~ يزخرف لك كلمة او جملة
-❖=rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها
-❖=roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل
-❖=emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر
-❖=say ~ يكرر الكلام الي تكتبو
-❖=image ~ صورة السيرفر
-❖=members ~ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
-❖=id ~ معلومات عنك
-❖=bans ~ عدد الاشخاص المبندة 
-❖=avatar ~ صورتك او صورة الي تمنشنو
-❖=embed ~ يكرر الي تقولو بشكل حلو
-❖=emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
-❖=inv ~ لدعوة البوت الى سيرفرك
-❖=support ~ سيرفر الدعم
-❖=contact ~ ارسال اقتراح او لمراسلة صاحب البوت
-❖=topinv لعرض اكثر الاعضاء الذين يدعون
-
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   }); 
 
 const adminprefix = "-";
 const devs = ['411137717884289024','298047001239486466'];
